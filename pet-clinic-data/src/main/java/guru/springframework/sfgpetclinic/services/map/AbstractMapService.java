@@ -34,6 +34,8 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
     }
 
     private Long getNextId(){
+        if(map.size() == 0)
+            return 0L;
         return Collections.max(map.keySet()) + 1;
     }
 }
