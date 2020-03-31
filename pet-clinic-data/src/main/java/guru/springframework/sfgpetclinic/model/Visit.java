@@ -9,7 +9,6 @@ public class Visit extends BaseEntity {
     private LocalDate date;
     private String description;
 
-    @Column(name = "pets")
     @ManyToOne
     @JoinColumn(name = "pet-id")
     private Pet pet;
